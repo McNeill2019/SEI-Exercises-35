@@ -1,7 +1,6 @@
 console.log('hello ye olde world');
 
-//cmd K 1 = hides arrays.
-//cmd K 2 = unhides.
+// Our arrays of insult adjectives and nouns:
 
 const firstAdjectives = [
   'artless',
@@ -162,48 +161,28 @@ const nouns = [
   'wagtail'
 ];
 
-//1. Pick a random entry from the first list of adjectives.
 const generateRandomInt = function( max ){
-
-//Step 1 = Choose a random number between 0 and length -1 (largest number).
-//Step 2 = Save the number to a variable and use it as the index into the array.
-
-const random = Math.random() * max; // gives us a random float between 0 and max.
-
-return Math.floor(random); // rounds down to nearest integer and return that integer.
+  const random = Math.random() * max;  // gives us a random float between 0 and max
+  return Math.floor( random );         // round down to nearest integer, and return that integer
 };
 
-//Math.floor rounds down to whole number.
-//math.random produces number between 0 and 1.
+const getRandomElementFromArray = function( array ){
+  // console.log('Array length is: ', array.length);
 
-//Step 3: Creates a function that takes an argument of the array.
-
-//inside the function is a variable that contains the random integer function with argument of the array length. This takes the array length number and generate a random number.
-
-//Then return the result of the variable.
-
-const getRandomElementFromArray = function ( array ) {
-
-  const randomIndex = generateRandomInt ( array.length );
-  return array [ randomIndex ];
+  const randomIndex = generateRandomInt( array.length );
+  return array[ randomIndex ];
 };
 
-// create a
+const generateInsult = function(){
+  const firstAdjective  = getRandomElementFromArray( firstAdjectives );
+  const secondAdjective = getRandomElementFromArray( secondAdjectives );
+  const noun            = getRandomElementFromArray( nouns );
 
-const generateInsult = function() {
-
-  const firstAdjective = getRandomElementFromArray ( firstAdjectives );
-
-  const secondAdjective = getRandomElementFromArray ( secondAdjectives );
-
-  const noun = getRandomElementFromArray( nouns );
-
-  console.log(`thou ${firstAdjective} ${secondAdjective} ${noun}!`)
+  console.log(`Thou ${firstAdjective} ${secondAdjective} ${noun}!`);
 };
 
-generateInsult();
+// generateInsult();
 
-// * arrayName.length multiplies it by the array length.
-
-
-//Step 2 = Save the number to a variable and use it as the index into the array.
+  // const firstAdjective  = firstAdjectives[ Math.floor( Math.random() * firstAdjectives.length ) ];
+  // const firstAdjective  = firstAdjectives[ Math.floor( Math.random() * firstAdjectives.length ) ];
+  // const firstAdjective  = firstAdjectives[ Math.floor( Math.random() * firstAdjectives.length ) ];

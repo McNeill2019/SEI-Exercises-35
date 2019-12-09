@@ -1,0 +1,3 @@
+all-bs.txt
+bar.txt
+bookshelf.txt
