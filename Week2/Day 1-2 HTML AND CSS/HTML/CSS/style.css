@@ -1,0 +1,59 @@
+body {
+  background-color: rgb(255,0,100);
+  /*#00FF00; */
+  font-family: Arial, sans-serif;
+}
+
+/* Make all img tage on the page have a 1px thick solid border whose colour is white.
+*/
+
+img {
+  border: 1px dashed white;
+}
+
+.special {
+  background-color: white;
+}
+
+span {
+  border: 1px solid yellow;
+}
+
+h1, h3 {
+  color: lime;
+}
+
+p a {
+  text-decoration: none;
+}
+
+#best {
+  font-size: 180%;
+}
+
+#content {
+  width: 70%;
+  /*widths are calculated relative to the parent container of the element!
+  (in this case, <body>, the whole window width)
+  */
+
+  text-align:center;
+  /*centers the CONTENTS not the element */
+
+  margin: 0 auto;
+
+}
+
+img#firstBill{
+  transform: rotate(0deg) scale (1.0)
+  filter:hue-rotate(0deg);
+  transition: 5s;
+  /*animations */
+}
+
+img#firstBill:hover {
+  transform: rotate(360deg) scale(3.0)
+  filter: hue-rotate(360deg);
+
+
+}

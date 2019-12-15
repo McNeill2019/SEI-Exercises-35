@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <title>My Website</title>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <h1>Welcome to my website</h1>
+
+    <h3> Sorry if this is not as thrilling as Javascript</h3>
+
+    <p> Here are all my interesting thoughts and opinions</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <img id="firstBill" src="http://www.fillmurray.com/600/400" alt="Bill">
+    <img src="http://www.fillmurray.com/600/400" alt="Bill2">
+    <! alt displays text if image doesn't load. Good for SEO>
+
+    <p class="special"><strong>My favourite Dogs</strong></p>
+    <p><em>My favourite Dogs</em></p>
+
+    <p class="special">Jump straight to <a href="#op2">My best opinion</a></p> <!Creates a link that jumps to the corresponding place in the page>
+
+    <ol>
+        <li id ="best">Ruby</li>
+        <li>Jess</li>
+        <li>Nookie</li>
+    </ol>
+
+    <p>Learning to code? Why not <a href="http://ga.co/" target="_blank">study at GA?</a></p>
+
+    <span>Hello.</span>
+    <span>Hello again.</span> <!Has a default of inline>
+
+    <div>This will get it's own line </div> <!has a default of block>
+
+    <div>This will get it's own line <span>This will not</span> </div>
+    <span>Here comes a form<span>
+
+    <form class="" action="index.html" method="post">
+
+      <input type="text" name="textExample" value="" placeholder="Enter name here">
+
+      <input type="password" name="seekrit" value="">
+
+      <textarea name="content" id="" rows="10" cols="30" placeholder="nope">
+      Default text goes here.
+      (There is no value=".." attribute)
+      </textarea>
+
+      <p> Dropdown list</p>
+
+      <select name="dog">  <!--dropdown list - this is the container for it -->
+        <option value="" disbled selected >Please select the following </option>
+        <option value="45">Toller</option>
+        <option value="300">Husky</option>
+        <option id = "bestDog" value="12">Golden Retriever</option>
+      </select>
+
+      <fieldset> <!-- for sectioning -->
+
+          <!--Checkbox -->
+          <legend> Dog traits. Select one or more of the folowing"</legend>
+
+          <p>Checkbox</p>
+          <input type="checkbox" value="boundy" id="bounding">
+          Lot's of bounding around <!-- This text automatically activates the checkbox because they are children of the label tag-->
+          <br>
+
+          <input type="checkbox" value="drooling" id="drool">
+          <label for="drool">Prodigious Slobbering</label>
+          <!-- this example requires the id and for(attribute) to match -->
+          <br>
+
+          <!-- Radio button -->
+          <p>Radio Button<p>
+          <input type="radio" id="groucho" name="bro">
+          <label for="groucho">Groucho</label>
+          <br>
+          <input type="radio" id="groucho" name="bro">
+          <label for="Harpo">Harpo</label>
+          <br>
+          <input type="radio" id="groucho" name="bro">
+          <label for="Chico">Chico</label>
+          <br>
+
+          <!-- Submitting the form -->
+          <p>Submit the form</p>
+          <input type="submit" value="submit this form!">
+
+          </fieldset>
+    </form>
+
+<hr>
+    <h4>Forbidden!</h4>
+
+    <b>Bold tag - use "strong" instead</b><br>
+    <i>Italic - Use "em" instead or CSS</i><br>
+    <blink> So Annoying!</blink>
+    <font size="8pt"> Not allowed anymore - use CSS wih a "span" or "div"</font> <br>
+    <span style ="color: red; font-size: 14pt">
+      Some text I want to style - I know, i'll use inline styles.
+    </span>
+    <center> This was once used to center text. Now use Css text-align: center or margin: auto instead. </center>
+    <marquee behavior="" direction="down">
+      <img src="http://www.fillmurray.com/600/400" alt="">
+    </marquee>
+
+    <p>End of Forbidden section<p>
+
+    <hr>
+
+    <blockquote><!--gets indented-->
+      <a href="nothing">Your one stop nihilsm shop</a> <br>
+      Brandname &copy; <br>
+      less than &lt; <br>
+      Greater than &gt; <br>
+      Ampersand &amp; <br>
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </blockquote>
+
+
+    <pre>
+      This line.
+      Will be separate.
+      From this line.
+      And spaces......
+    </pre>
+
+    This is for code; <code> const x = 5; </code>
+
+    <div id="content">
+    <p>Tables</p>
+
+    <table>
+      <thead>
+      <tr>
+        <td>Brother</td>
+        <td>Instrument</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Groucho</td>
+        <td>Guitar</td>
+      </tr>
+
+      <tr>
+        <td>Harpo</td>
+        <td>Harp</td>
+      </tr>
+
+      <tr>
+        <td>Chico</td>
+        <td>Flute</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!comments are still visible in the browser!>
+    </div>
+
+    <a name="op2">Option Number One</a> <!creates an anchor that can be jumped to>
+
+    <script src="js/events.js"></script>
+
+  </body>
+
+</html>
