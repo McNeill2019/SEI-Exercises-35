@@ -1,0 +1,16 @@
+<h1>Search Results for <%= @movie %></h1>
+
+<!-- <p> Title: <%= @title %></p>
+<p> Overview: <%=@overview%></p>
+<p> Popularity: <%= @popularity %></p>
+<p> Poster: <img src = "http://image.tmdb.org/t/p/w185<%= @poster %>" alt="movie poster"> </p> -->
+
+<ul class ="results">
+<% @results.each do |movie| %>
+<li>
+  <a href="/movies/results/<%= movie['id']%>">
+  <img src = "http://image.tmdb.org/t/p/w185<%=movie['poster_path']%>" alt=<%= movie['original_title'] %>
+  </a>
+</li>
+<% end  %>
+</ul>

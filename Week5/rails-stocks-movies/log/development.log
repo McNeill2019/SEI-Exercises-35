@@ -1,0 +1,256 @@
+Started GET "/" for ::1 at 2020-01-06 15:52:01 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (9.5ms)
+Completed 200 OK in 47ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2020-01-06 15:52:11 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 499ms (Views: 495.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/lookup?stock_symbol=AAPL" for ::1 at 2020-01-06 15:52:18 +1100
+Processing by StocksController#do_lookup as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+  Rendering stocks/do_lookup.html.erb within layouts/application
+  Rendered stocks/do_lookup.html.erb within layouts/application (382.9ms)
+Completed 500 Internal Server Error in 1263ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `price' for #<#<Class:0x007ffb2b789758>:0x007ffb2bc6c748>
+Did you mean?  @price):
+    4:   The latest price for
+    5:   <strong><%= @symbol %></strong> (<%= @company_name %>)
+    6:   is
+    7:   $<%= price %>
+    8: </p>
+  
+app/views/stocks/do_lookup.html.erb:7:in `_app_views_stocks_do_lookup_html_erb__1102528598464301530_70358373984500'
+Started GET "/stocks/lookup?stock_symbol=AAPL" for ::1 at 2020-01-06 15:52:38 +1100
+Processing by StocksController#do_lookup as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+  Rendering stocks/do_lookup.html.erb within layouts/application
+  Rendered stocks/do_lookup.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 860ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/movies" for ::1 at 2020-01-06 16:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/stocks/movies"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/movies" for ::1 at 2020-01-06 16:18:49 +1100
+Processing by MoviesController#form as HTML
+  Rendering movies/form.html.erb within layouts/application
+  Rendered movies/form.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 600ms (Views: 596.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for ::1 at 2020-01-06 16:19:03 +1100
+Processing by MoviesController#form as HTML
+  Rendering movies/form.html.erb within layouts/application
+  Rendered movies/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:19:09 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=#{@movie}):
+  
+app/controllers/movies_controller.rb:12:in `lookup_movie'
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:20:46 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 379ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:25:23 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 271ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:32:41 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 303ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:43:41 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6: <p> Poster: <img src = "http://image.tmdb.org/t/p/w185<%= @poster %>" alt="movie poster"> </p> -->
+     7: 
+     8: <ul>
+     9: <% @results.each do |movie| %>
+    10: <li>
+    11:   <%= movie['original_title'] %>
+    12: </li>
+  
+app/views/movies/lookup_movie.html.erb:9:in `_app_views_movies_lookup_movie_html_erb__4409272994439821525_70337733511800'
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:44:19 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:48:11 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 272ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:51:22 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 303ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=Pulp+Fiction" for ::1 at 2020-01-06 16:53:48 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"Pulp Fiction"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 265ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/results/680" for ::1 at 2020-01-06 16:53:50 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/movies/results/680"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/movies/lookup?movie_name=lion+king" for ::1 at 2020-01-06 16:57:54 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"lion king"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 263ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/lookup?movie_name=lion" for ::1 at 2020-01-06 16:58:06 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"lion"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 261ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/results/334543" for ::1 at 2020-01-06 16:58:12 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/movies/results/334543"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/movies/lookup?movie_name=lion" for ::1 at 2020-01-06 17:02:25 +1100
+Processing by MoviesController#lookup_movie as HTML
+  Parameters: {"movie_name"=>"lion"}
+  Rendering movies/lookup_movie.html.erb within layouts/application
+  Rendered movies/lookup_movie.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 350ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+

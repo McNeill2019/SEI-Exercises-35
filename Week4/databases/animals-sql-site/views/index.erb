@@ -1,0 +1,18 @@
+
+<h2>All Animals</h2>
+
+<p>
+
+    <%#loops though each hash of animals and looks for the key of the name of the animal %>
+
+  <% @results.each do |animal| %>
+
+    <li>
+        <%#creates a href link that navigates the user to the id of the animal %>
+      <a href="/animals/<%= animal['id'] %>"> <%= animal['name'] %> </a>
+    </li>
+
+
+  <% end %>
+
+</p>

@@ -1,0 +1,13 @@
+<h1>The answer is!</h1>
+
+<%= @first %>
+<%= @op %>
+<%= @second %>
+=
+<%= @result %>
+
+<%# Any Ruby code can be written in an erb file using erb tags, but it's best to keep as much logic out of our views as possible. So, in the basic Sinatra implementation set out in this guide, we want to put most of our logic in our main.rb file.
+There are a few different erb tags, but these are the three we'll use the most:
+<%  ruby_code %>          <!-- execute ruby code without displaying the result  -->
+<%# <%= ruby_expression  %>   <!-- replace with the result of the expression  --> %>
+<%# comment %>            <!-- ignored, and not sent to client --> %>
