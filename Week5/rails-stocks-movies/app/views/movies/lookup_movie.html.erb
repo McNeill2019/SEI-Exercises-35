@@ -14,3 +14,63 @@
 </li>
 <% end  %>
 </ul>
+
+def change
+  create_table :tennis do |t|
+
+    t.integer :world_ranking
+    t.string :name
+    t.integer :age
+    t.string :country
+    t.float :prize_money
+    t.integer :titles
+    t.text :image
+
+ end
+end
+
+
+Planet.destroy_all
+
+Tennis.create world_ranking: 1, name: 'Rafael Nadal' , age: 33, country: 'Spain', prize_money: 119_601_561, titles: 84, image: 'https://cdn.cnn.com/cnnnext/dam/assets/190908221015-nadal-trophy-exlarge-169.jpg'
+
+Tennis.create world_ranking: 2, name: 'Novak Djokovic' , age: 32, country: 'Serbia', prize_money: 139_144_944, titles: 77, image: 'https://cdn.images.express.co.uk/img/dynamic/72/590x/Novak-Djokovic-Wimbledon-989238.jpg?r=1532500530889'
+
+Tennis.create world_ranking: 3, name: 'Roger Federer' , age: 38, country: 'Switzerland', prize_money: 129_231_891, titles: 103, image: 'https://cdn.theatlantic.com/assets/media/img/mt/2017/07/RTX3BPR8/lead_720_405.jpg?mod=1533691895'
+
+Tennis.create world_ranking: 4, name: 'Dominic Thiem' , age: 26, country: 'Austria', prize_money: 22_132_368, titles: 16, image: 'https://cdn.images.express.co.uk/img/dynamic/72/590x/Dominic-Thiem-1120123.jpg?r=1556471644923'
+
+Tennis.create world_ranking: 4, name: 'Danil Medvedev' , age: 23, country: 'Russia', prize_money: 10_507_693, titles: 7, image: 'https://www.atptour.com/en/news/www.atptour.com/-/media/images/news/2019/10/13/10/46/medvedev-shanghai-2019-final-trophy.jpg'
+
+
+
+
+
+
+
+
+
+
+
+
+
+def change
+  create_table :planets do |t|
+
+    #rails automatically gives us an integer :id field which will be the primary key for the table. It is not optional.
+    #auto-increments. It's not optional.
+
+    t.string :name # a string column for the planet's name
+    t.text :image # a longer text column for the image URL
+    t.float :orbit # a float for the orbit time (relative to earth)
+    t.float :diameter
+    t.float :mass
+    t.integer :moons
+
+    # The above saves us from writing an SQL statement.
+    # like 'CREATE TABLE planets ( name TEXT,...)' in SQL.
+    # and because it's ruby code, it's an abstraction away from any specific database format and it can be translated in to any specific format.
+
+
+  end
+end

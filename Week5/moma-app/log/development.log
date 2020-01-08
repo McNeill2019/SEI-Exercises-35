@@ -1,0 +1,260 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateArtists (20200107235858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "nationality" varchar, "dob" date, "period" varchar, "image" text, "roundness" integer, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200107235858_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200107235858"]]
+  ↳ bin/rails:4
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-08 00:01:49.050802"], ["updated_at", "2020-01-08 00:01:49.050802"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (1.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ken Done"], ["nationality", "Aussie"], ["created_at", "2020-01-08 00:12:05.481296"], ["updated_at", "2020-01-08 00:12:05.481296"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mArtist Destroy (0.7ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "period", "image", "roundness", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lee Krasner"], ["nationality", "USA"], ["period", "20th Century"], ["image", "https://i.pinimg.com/736x/05/62/14/0562148ce05f206e7ad773dc65d565bc--lee-krasner-abstract-expressionism.jpg"], ["roundness", 5], ["bio", "Abstract Expressionist"], ["created_at", "2020-01-08 00:42:40.887957"], ["updated_at", "2020-01-08 00:42:40.887957"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name" FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mArtist Destroy (0.5ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[36mArtist Create (1.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "period", "image", "roundness", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lee Krasner"], ["nationality", "USA"], ["period", "20th Century"], ["image", "https://i.pinimg.com/736x/05/62/14/0562148ce05f206e7ad773dc65d565bc--lee-krasner-abstract-expressionism.jpg"], ["roundness", 5], ["bio", "Abstract Expressionist"], ["created_at", "2020-01-08 00:51:11.610428"], ["updated_at", "2020-01-08 00:51:11.610428"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "roundness", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Frantisek Kupka"], ["nationality", "Czech"], ["dob", "1871-09-23"], ["period", "20th Century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/0/05/Frantisek_Kupka_1928.jpg"], ["roundness", 6], ["bio", "Vorticist/Abstract"], ["created_at", "2020-01-08 00:51:11.617556"], ["updated_at", "2020-01-08 00:51:11.617556"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "roundness", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max Ernst"], ["nationality", "German"], ["dob", "1891-04-02"], ["period", "20th Century"], ["image", "http://www.max-ernst.com/images/max-ernst-photo.jpg"], ["roundness", 5], ["bio", "Abstract Expressionist"], ["created_at", "2020-01-08 00:51:11.622008"], ["updated_at", "2020-01-08 00:51:11.622008"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "artists"."name" FROM "artists"[0m
+  ↳ db/seeds.rb:13
+Started GET "/artists" for ::1 at 2020-01-08 12:08:21 +1100
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 1110ms (Views: 1099.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2020-01-08 12:15:48 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:4
+  Rendered artists/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 32.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists" for ::1 at 2020-01-08 12:18:16 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:4
+  Rendered artists/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:28:17 +1100
+  
+SyntaxError (/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  get 'artists'/:id' => 'artists#show', as 'artist
+                    ^
+/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+get 'artists'/:id' => 'artists#show', as 'artist'
+                              ^):
+  
+config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:29:24 +1100
+  
+SyntaxError (/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  get 'artists'/:id' => 'artists#show', as: 'artis
+                    ^
+/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+get 'artists'/:id' => 'artists#show', as: 'artist'
+                              ^):
+  
+config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:29:34 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.5ms)
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 110ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:29:47 +1100
+  
+SyntaxError (/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  get 'artists'/:id' => 'artists#show', as: 'artis
+                    ^
+/Users/jamiemcneill/sei/Sei_classwork/Week5/moma-app/config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+get 'artists'/:id' => 'artists#show', as: 'artist'
+                              ^):
+  
+config/routes.rb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+config/routes.rb:14: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:29:52 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:30:36 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-08 12:31:01 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (53.0ms)
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/jamiemcneill/.rvm/gems/ruby-2.4.1/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 98ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2020-01-08 12:31:47 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:4
+  Rendered artists/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 66ms (Views: 46.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/3" for ::1 at 2020-01-08 12:31:50 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2020-01-08 12:36:51 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:4
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/3" for ::1 at 2020-01-08 12:57:26 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h2>
+    2:   <%= @artist.name %>
+    3: </h2>
+    4: 
+    5: <p><strong>Nationality</strong> <%= artist.nationality %></p>
+  
+app/views/artists/show.html.erb:2:in `_app_views_artists_show_html_erb___3009631132521478582_70206965508160'
+Started GET "/artists/3" for ::1 at 2020-01-08 12:57:46 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (376.0ms)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x007fb4af031ae0>:0x007fb4af031180>
+Did you mean?  @artist):
+    2:   <%= @artist.name %>
+    3: </h2>
+    4: 
+    5: <p><strong>Nationality</strong> <%= artist.nationality %></p>
+    6: <p><strong>Date of Birth</strong> <%= artist.dob %></p>
+    7: <p><strong>Period</strong> <%= artist.period %></p>
+    8: <p><strong>Roundness</strong> <%= artist.roundness %></p>
+  
+app/views/artists/show.html.erb:5:in `_app_views_artists_show_html_erb___3009631132521478582_70207003529700'
+Started GET "/artists/3" for ::1 at 2020-01-08 12:58:47 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/3" for ::1 at 2020-01-08 14:04:40 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
